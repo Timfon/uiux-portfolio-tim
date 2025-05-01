@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Redesigning the Dwarf Fortress Website</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <style>
+    .case-study-container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+    
+    .case-study-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    
+    .case-study-image {
+      width: 100%;
+      height: auto;
+      border: 4px solid var(--border-color);
+      border-radius: 8px;
+      margin: 2rem 0;
+    }
+    
+    .process-section {
+      margin: 3rem 0;
+      padding: 1.5rem;
+      border: 2px solid var(--border-color);
+      border-radius: 8px;
+      background-color: var(--card-bg);
+    }
+    
+    .process-title {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+      color: var(--accent-color);
+    }
+    
+    .process-icon {
+      width: 24px;
+      height: 24px;
+      background-color: var(--accent-color);
+    }
+    
+    .image-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+    
+    .image-grid img {
+      width: 100%;
+      height: auto;
+      border: 2px solid var(--border-color);
+      border-radius: 4px;
+    }
+    
+    .back-button {
+      display: inline-block;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="game-container">
+    <a href="index.html" class="menu-item back-button">BACK TO HOME</a>
+    
+    <div class="case-study-container">
+      <div class="case-study-header">
+        <h1>Reimagining the Spark AI Report
+        </h1>
+        <p class="tagline">UX/UI design for the SparkAI zoning startup</p>
+      </div>
+      
+      <img src="/spark.png" alt="App Redesign Cover Image" class="case-study-image">
+      
+      <div class="process-section">
+        <h2 class="process-title">
+          <div class="process-icon"></div>
+          What is the goal of design?
+        </h2>
+        <p>These questions are best addressed through the lens of Iterative Design — a design philosophy that emphasizes building, testing, and refining through multiple stages. Rather than trying to create a perfect product in one go, Iterative Design encourages starting with rough prototypes and improving them gradually through feedback and evaluation. Since it’s difficult for anyone to create a flawless design all at once, this philosophy utilizes trial and error as an essential part of the creative process, allowing us to explore a broader width of possible ideas.
+        </p>
+        <p>There are many ways to apply Iterative Design, but here’s a simple workflow that captures the core idea. Between each stage, one should employ a variety of evaluation methods to try and improve upon the design:
+        </p>
+
+        <p>Sketches → Low-Fidelity Wireframe → High-Fidelity Prototype → Final Product
+        </p>
+
+        <ul>
+          <li>Sketches: Begin by creating as many different sketches as possible. The goal isn’t to perfect each sketch, but to explore a wide range of ideas. The rougher, the better — focusing on core concepts helps the creator stay flexible and avoid getting too attached to any one sketch.</li>
+          <li>Low-Fidelity Wireframe: Review all the sketches, analyze their strengths and weaknesses, and then combine the best aspects into one or more wireframes. These wireframes serve as basic, structural representations of the product. They should convey the overall vision without getting bogged down in details like precise sizes or colors.</li>
+          <li>High-Fidelity Prototype: From the wireframes, select the most promising design and refine it into a high-fidelity prototype. This version should closely resemble the final product — detailed enough that developers could build from it without needing further clarification. At this stage, user testing and stakeholder feedback are critical for validation and refinement.
+          </li>
+          <li>Final Product: Once the prototype has been tested and finalized, you’re ready to move forward with the actual product — polished, functional, and ready for launch.
+          </li>
+        </ul>
+        <p>To put this process into practice, we applied Iterative Design while building a brand-new user interface from scratch in collaboration with a startup: Spark AI.
+
+        </p>
+      </div>
+      <div class="process-section">
+        <h2 class="process-title">
+          <div class="process-icon"></div>
+          Redesigning the Spark AI Report
+        </h2>
+        
+        <p>Spark AI is a startup that leverages artificial intelligence to provide meaningful insights on real-world assets—think properties, parcels of land, or infrastructure. One of its core products is a tool that helps users assess whether a piece of land is suitable for solar development. It does this by combining environmental data, zoning regulations, and satellite imagery into one easy-to-understand report.</p>
+        <p>However, the existing report interface has several usability issues. The content is dense, poorly structured, and text-heavy—making it hard for users to extract key insights. To address this, Spark AI invited our team of four Brown University students to revamp the report experience. Our mission: make it clearer, more engaging, and easier to act on. :)
+
+        </p>
+      </div>
+      <div class="process-section">
+        <h2 class="process-title">
+          <div class="process-icon"></div>
+          Understanding the Problem
+        </h2>
+        <p>Before beginning the redesign, we wanted to understand the product and its users. Our team met with the founders of Spark AI to get an in-depth walkthrough of the current report experience.</p>
+        <div class="image-grid">
+          <img src="/spark_image.png" alt="User persona 1">
+          <img src="/spark_image_2.png" alt="User persona 1">
+        </div>
+        <p>In our meeting, we learned that the report is primarily used by renewable energy developers and investors to assess whether a piece of land is viable for a solar project. These users are interested in:
+        </p>
+        <ul>
+          <li>Zoning laws and local permitting requirements
+          </li>
+          <li>Community sentiment—are local residents or governments supportive of solar development?
+          </li>
+          <li>Precedent—have other solar projects been approved in the surrounding area?
+          </li>
+          <li>Credible sourcing—clear citations that verify the information presented
+          </li>
+        </ul>
+        <p>Currently, all of this data is packed into a text-heavy report that’s difficult to scan, navigate, or act on. The Spark team encouraged us to rethink the interface from a user experience perspective—introducing stronger visual hierarchy, more digestible formats (like tables, cards, or visualizations), and clearer ways to surface key insights.
+
+        </p>
+      </div>
+
+
+
+
+      <div class="process-section">
+        <h2 class="process-title">
+          <div class="process-icon"></div>
+          Initial Sketches
+        </h2>
+        <p>With that challenge in mind, each team member brainstormed and sketched early concepts of the report. We worked independently so we could explore a wider range of ideas before aligning on a shared design direction.
+        </p>
+        <p>Bokai's Sketches</p>
+        <ul>
+          <li>Focused on implementing a hierarchical layout that can smooth user experience</li>
+          <li>Employed collapsable menus and buttons that expand to more detailed views - making sure we present a readable and useful at-a-glance summary.</li>
+          <li>Made pages for document diligence and bulk report that integrate with other services (i.e. SparkGPT)</li>
+        </ul>
+        <div class="image-grid">
+          <img src="/bokai.png" alt="User persona 1">
+          </div>  
+      </div>
+
+      <div class="process-section">
+        <h2 class="process-title">
+          <div class="process-icon"></div>
+          Christina's Sketches:
+        </h2>
+        <ul>
+          <li>Focused on modular and collapsible design to reduce cognitive load.</li>
+          <li>Used components like tabs, accordions, and tables to break up dense content and make insights easier to extract.</li>
+          <li>Adapted layout elements (like map placement) across desktop, tablet, and mobile for responsibility across screen sizes.</li>
+        </ul>
+        <div class="image-grid"> <!-- maybe get rid of the image-grid-->
+          <img src="/christina1.png" alt="User persona 1">
+          <img src="/christina2.png" alt="User persona 1">
+          <img src="/christina3.png" alt="User persona 1">
+        </div>  
+      </div>
+
+      <div class="process-section">
+        <h2 class="process-title">
+          <div class="process-icon"></div>
+          Max's Sketches:
+        </h2>
+        <ul>
+          <li>Reorganized report structure to ensure components display in parsable card views.</li>
+          <li>Utilized eye-catching primary colors to summarize large amounts of details in digestible manners.
+          </li>
+          <li>In general, made the user interface more aesthetically pleasing and less daunting.          </li>
+        </ul>
+        <div class="image-grid"> <!-- maybe get rid of the image-grid-->
+          <img src="/max.png" alt="User persona 1">
+        </div>  
+      </div>
+
+      <div class="process-section">
+        <h2 class="process-title">
+          <div class="process-icon"></div>
+          Timothy's Sketches:
+        </h2>
+        <ul>
+          <li>Focused on a dashboard layout to make information easily accessible to users.</li>
+          <li>Simplified the UI to allow each card in the grid layout to be expandable for further information
+          </li>
+        </ul>
+        <div class="image-grid"> <!-- maybe get rid of the image-grid-->
+          <img src="/tim.png" alt="User persona 1">
+          <img src="/tim2.png" alt="User persona 1">
+          <img src="/tim3.png" alt="User persona 1">
+        </div>  
+      </div>
+
+
+
+      <div class="process-section">
+        <h2 class="process-title">
+          <div class="process-icon"></div>
+          Low-Fi Wireframe
+        </h2>
+        <p>After reviewing our sketches and identifying their strengths (use of color, expandable cards, and a collapsible layout), we combined the best ideas into a low-fidelity wireframe for Spark AI. Our goal was to focus on layout and functionality so that the core vision could stand out.
+        </p>
+        <div class="image-grid"> <!-- maybe get rid of the image-grid-->
+          <img src="/rich.png" alt="User persona 1">
+        </div>
+        <ul>
+          <li>We wanted a bold title statement to make it clear to users the purpose of the application</li>
+          <li>Kept the old sidebar on the left, while simplifying the text and information in the main layout of the page on the right.
+          </li>
+        </ul>
+        <div class="image-grid"> <!-- maybe get rid of the image-grid-->
+          <img src="/parcel.png" alt="User persona 1">
+        </div>
+
+        <ul>
+          <li>Interactive map view allows users to click on specific parcels to access reports
+          </li>
+          <li>The sidebar can be collapsed to allow for a larger screen, allowing for a smoother user experience
+          </li>
+          <li>Color coded sentiment analysis allows users to easily find the information needed for the zone they are interested in
+          </li>
+          <li>The color coded document types also makes it significantly easier for users to narrow down the specific/relevant documents they would like to access to know more about the parcel of interest
+          </li>
+          <li>The zoning detail card can expand out for a more fleshed out analysis
+          </li>
+        </ul>
+        <div class="image-grid"> <!-- maybe get rid of the image-grid-->
+          <img src="/geotech.png" alt="User persona 1">
+        </div>
+        <ul>
+          <li>Document diligence page shows how we plan to cluster zoning information together into cards, allowing users to click each one for further information
+          </li>
+          <li>Created the chat function near the top of the page, making it clear to users where to input the zoning information to get answers from the Spark AI
+          </li>
+        </ul>
+        <p>Each screen in the wireframe is designed to directly address a specific user need—from exploring zoning details to filtering documents quickly.
+        </p>
+        <div class="image-grid"> <!-- maybe get rid of the image-grid-->
+          <div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/f1aa17634776476b90f8e407b72a3fc7?sid=bae0056f-d1d6-4ebf-a8d5-9b1f83053f35" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+        </div>
+
+
+      </div>
+      <div class="process-section">
+        <h2 class="process-title">
+          <div class="process-icon"></div>
+          Feedback on our Wireframe
+        </h2>
+        <p>After sharing our low-fidelity wireframe with the Spark team, we received enthusiastic and constructive feedback.</p>
+        <p>Overall, the Spark team was very supportive of the direction we’re taking with the UI, and encouraged us to continue iterating on these ideas as we move toward the Hi-Fi prototype.
+        </p>
+        <p>Reflecting on the sketching and wireframing process, we saw how each iteration helped clarify the user experience. By combining ideas from multiple sketches, we created a wireframe that balanced structure, clarity, and interaction. Still, we recognized areas for growth—like better content richness and clearer visual cues—which guided our decisions in the next phase of prototyping.
+        </p>
+      </div>
+      <div class="process-section">
+        <h2 class="process-title">
+          <div class="process-icon"></div>
+          Hi-Fi Prototype
+        </h2>
+        <p>Based on the feedback, we primarily focused on retooling the reports page. The primary critique we received was that our Lo-Fi prototype was a bit on the barebones side. The “card” dashboard idea was effective in making information more visually digestible, but it should be populated with more content.
+        </p>
+        <p>As a result, we incorporated several key changes into our Hi-Fi prototype. We improved the content density within the report cards by adding relevant text for each section and introduced sentiment analysis to make parcel evaluation clearer and more actionable. In the wireframe critique, the Spark team told us to focus less on Document Diligence and SparkGPT features, so we omitted them in our Hi-Fi Prototype. Instead, we added more screens to make the report page fully functional.
+        </p>
+        <p>Click <a href="https://www.figma.com/proto/mHRpi5436RtSsW7O8RxTce/Spark-AI-Reports--Hi-Fi-Prototype-?node-id=11-2&t=sxclbGS5ImMI2gyn-1&starting-point-node-id=11%3A2">here</a> to access our prototype!</p>
+        <div class="image-grid">
+          <div style="position: relative; padding-bottom: 62.5%; height: 0;"><iframe src="https://www.loom.com/embed/6471f9549cad4e16a56ddcd5bea73bb2?sid=aac1e52e-4069-4f3c-904b-dcac6a2e4876" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+        </div>
+      </div>
+      <div class="process-section">
+        <h2 class="process-title">
+          <div class="process-icon"></div>
+          Design Notes
+        </h2>
+        <p>
+          In making the prototype, we stuck to various design practices in order to produce a professional model. We used Figma layout features and abided by a predetermined set of fonts and styles for text sections and major components. We focused on alignment, consistent spacing, and visual hierarchy to ensure the prototype looked and behaved like a production-ready tool.
+
+
+        </p>
+        <p>
+          Our prototype aims to address the startup’s goal of helping users quickly assess zoning and parcel information by consolidating relevant data into an intuitive, visual format.
+
+
+        </p>
+        <p>
+          To showcase, here are some side-by-side comparisons of our wireframe and prototype:
+
+
+        </p>
+        
+        <div class="image-grid">
+          
+          <img src="/side1.png?height=150&width=500" alt="User persona 1">
+          <img src="/side2.png?height=150&width=500" alt="User persona 1">
+          <img src="/side3.png?height=150&width=500" alt="User persona 1">
+          <img src="/side4.png?height=150&width=500" alt="User persona 1">
+          <img src="/side5.png?height=150&width=500" alt="User persona 1">
+          <img src="/side6.png?height=150&width=500" alt="User persona 1">
+        </div>
+
+        We also implemented expandable windows for the various interactable cards:
+        <div class="image-grid">
+          <img src="/cali.png" alt="User persona 1">
+        </div>
+        <div class="image-grid">
+          <img src="/cali1.png" alt="User persona 1">
+        </div>
+        <div class="image-grid">
+          <img src="/cali3.png" alt="User persona 1">
+        </div>
+        <div class="image-grid">
+          <img src="/cali4.png" alt="User persona 1">
+        </div>
+      </div>
+      
+      <div class="process-section">
+        <h2 class="process-title">
+          <div class="process-icon"></div>
+          Feedback on Prototype
+        </h2>
+<p>Overall, the feedback was positive, and the Spark team wanted to continue working with us to iterate on our Hi-Fi prototype. Moving forward, we plan to expose key zoning details upfront, add a 'Past Projects' section, and allow users to customize the columns displayed in the Relevant Articles table.
+</p>
+        
+      </div>
+      
+      <div class="process-section">
+        <h2 class="process-title">
+          <div class="process-icon"></div>
+          Conclusions
+        </h2>
+      <p>Designing for Spark AI reminded us that clarity doesn’t come from adding more — it comes from understanding what actually matters to the user. Each round of iteration pushed us to cut noise, highlight what’s essential, and question our own assumptions. Our prototype still has its gaps, but that’s the point of iterative design — there’s always something to improve. We’re excited by what we’ve built so far, and even more excited by what’s still left to figure out.</p>
+      </div>
+    </div>
+    
+    <a href="index.html" class="pixel-button back-button">RETURN TO HOME</a>
+  </div>
+</body>
+</html>

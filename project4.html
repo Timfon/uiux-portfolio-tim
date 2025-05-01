@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Python DNS Resolver
+</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <style>
+    .case-study-container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+    
+    .case-study-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    
+    .case-study-image {
+      width: 100%;
+      height: auto;
+      border: 4px solid var(--border-color);
+      border-radius: 8px;
+      margin: 2rem 0;
+    }
+    
+    .process-section {
+      margin: 3rem 0;
+      padding: 1.5rem;
+      border: 2px solid var(--border-color);
+      border-radius: 8px;
+      background-color: var(--card-bg);
+    }
+    
+    .process-title {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+      color: var(--accent-color);
+    }
+    
+    .process-icon {
+      width: 24px;
+      height: 24px;
+      background-color: var(--accent-color);
+    }
+    
+    .image-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+    
+    .image-grid img {
+      width: 100%;
+      height: auto;
+      border: 2px solid var(--border-color);
+      border-radius: 4px;
+    }
+    
+    .back-button {
+      display: inline-block;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="game-container">
+    <a href="index.html" class="menu-item back-button">BACK TO HOME</a>
+    
+    <div class="case-study-container">
+      <div class="case-study-header">
+        <h1>Python DNS Resolver
+        </h1>
+        <p class="tagline">Github: <a href="https://github.com/brown-cs1680-f24/fp-p-dns-final/blob/main/main.py">Link</a>
+        </p>
+      </div>
+      
+      <img src="/dns.jpg" alt="Mobile App Redesign Cover Image" class="case-study-image">
+      
+      <div class="process-section">
+        <h2 class="process-title">
+          <div class="process-icon"></div>
+          Introduction:
+        </h2>
+        <p>The project aims to implement a recursive and iterative DNS resolver in Python. Our tool is similar in functionality to the "dig" command, but with more verbose output that can allow the user to see the DNS resolution process in detail. The project successfully implements a DNS resolver capable of performing full iterative queries, recursive lookups, and single-step queries for both root servers and specific nameservers.
+        </p>
+
+        
+        
+      </div>
+      <div class="process-section">
+        <h2 class="process-title">
+          <div class="process-icon"></div>
+          Design/Implementation:
+        </h2>
+        <p>The resolver is implemented in Python using the dnspython library and utilizes three main query types: single-step queries (single_step_query), full iterative resolution (full_iterative_query), and recursive resolution (recursive_query). Additionally, some nameserver extraction logic was needed to get the next nameserver's IP from the response. The DNS program is wrapped in a user-friendly command-line interface implementing a REPL that accepts dig-style commands, and includes query timing management to track the DNS resolver's performance.
+        </p>
+        <p>For single-step queries, the program performs a single DNS query to a specified server. For both recursive and iterative queries, our program starts from a default root server (198.41.0.4) or the server specified by the user. The program shows each step of the resolution process and returns the final answer or fails if resolution is impossible.
+        </p>
+      </div>
+      <div class="process-section">
+        <h2 class="process-title">
+          <div class="process-icon"></div>
+          REPL query formats
+        </h2>
+        dig Command Usage:
+        <ul>
+          <li>dig &lt;domain&gt;</li>
+          Full recursive query from default root server
+          <li>dig &lt;domain&gt; -i</li>
+          Full iterative query from default root server
+          <li>dig &lt;domain&gt; @&lt;server&gt; -r</li>
+          Full recursive query from specific server
+          <li>dig &lt;domain&gt; @&lt;server&gt; -i</li>
+          Full iterative query from specific server
+          <li>dig &lt;domain&gt; @&lt;server&gt;</li>
+          Single step query to specific server
+
+        </ul>
+
+
+      </div>
+      
+      <div class="process-section">
+        <h2 class="process-title">
+          <div class="process-icon"></div>
+          Discussion/Results:
+        </h2>
+        Single-Step Query to Root Server:
+        
+        <div class="image-grid">
+          <img src="/dig.png" alt="User persona 1">
+        </div>
+        Full Iterative Resolution:
+        <div class="image-grid">
+          <img src="/dig2.png" alt="User persona 1">
+        </div>
+        Recursive Query Example:
+        <div class="image-grid">
+          <img src="/dig3.png" alt="User persona 1">
+        </div>
+        Caching Example:
+
+        <div class="image-grid">
+          <img src="/dig4.png" alt="User persona 1">
+        </div>
+
+        <p>	The program clearly implements a fully functional DNS resolver, with single-step, iterative, and recursive queries. As seen in the results, the resolver handles DNS referrals and nameserver extraction in a command-line interface. We also implement a basic caching system that caches found answers within a hashmap, which also logs an object representing the cache time of the entry. We use this to decrement the TTL of the cached entry. Rather than constantly checking whether an item is cached via some sort of concurrency model, we check the TTL every cache hit - if the TTL is expired perform whatever operation is necessary to obtain the answer and cache it again. As seen in the screenshot above, this improves our performance significantly.
+        </p>
+        <p>Some challenges that came up was name server resolution, which required careful handling of cases where the additional section was empty or when glue records were absent. Some other challenges that came up was the usage of the server 8.8.8.8, which seemed to automatically resolve the user's domain in one step, without showing the full path in the output.
+        </p>
+      </div>
+      <div class="process-section">
+        <h2 class="process-title">
+          <div class="process-icon"></div>
+Conclusion
+        </h2>
+      <p>Our Python DNS resolver provides a way for users to clearly see the DNS resolution process in detail– the iterative implementation especially helped visualize how the DNS hierarchy works in practice. Some potential improvements could be to add support for more DNS record types. Some other nice features to have would be IPv6 support, or a user interface that can visualize the path of the DNS query. Overall, the program clearly demonstrates the mechanisms of iterative and recursive DNS queries, and serves as a useful tool for understanding DNS infrastructure. The project successfully achieves its goal of demonstrating the DNS resolution process while providing a good starting point for future improvements and extensions.
+      </p>
+      </div>
+
+
+    </div>
+
+    <a href="index.html" class="pixel-button back-button">RETURN TO HOME</a>
+  </div>
+</body>
+</html>

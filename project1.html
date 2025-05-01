@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Redesigning the Dwarf Fortress Website</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <style>
+    .case-study-container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+    
+    .case-study-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    
+    .case-study-image {
+      width: 100%;
+      height: auto;
+      border: 4px solid var(--border-color);
+      border-radius: 8px;
+      margin: 2rem 0;
+    }
+    
+    .process-section {
+      margin: 3rem 0;
+      padding: 1.5rem;
+      border: 2px solid var(--border-color);
+      border-radius: 8px;
+      background-color: var(--card-bg);
+    }
+    
+    .process-title {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+      color: var(--accent-color);
+    }
+    
+    .process-icon {
+      width: 24px;
+      height: 24px;
+      background-color: var(--accent-color);
+    }
+    
+    .image-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+    
+    .image-grid img {
+      width: 100%;
+      height: auto;
+      border: 2px solid var(--border-color);
+      border-radius: 4px;
+    }
+    
+    .back-button {
+      display: inline-block;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="game-container">
+    <a href="index.html" class="menu-item back-button">BACK TO HOME</a>
+    
+    <div class="case-study-container">
+      <div class="case-study-header">
+        <h1>Redesigning the Dwarf Fortress Website</h1>
+        <p class="tagline">UX/UI redesign for the Dwarf Fortress Website</p>
+      </div>
+      
+      <img src="/df.png" alt="Mobile App Redesign Cover Image" class="case-study-image">
+      
+      <div class="process-section">
+        <h2 class="process-title">
+          <div class="process-icon"></div>
+          Context & Problem
+        </h2>
+        <p>I chose this website because it's a little hard to tell what links I should be clicking, where I should go to download the game, and overall it's a lot of information to process at once.
+        </p>
+        
+        
+      </div>
+      <div class="process-section">
+        <h2 class="process-title">
+          <div class="process-icon"></div>
+          Efficiency
+        </h2>
+        
+        <p>All the information on where you want to go is easily accessible on the navigation menu at the top.
+          
+        </p>
+        <p>There are multiple download buttons, making it easier for users to navigate.</p>
+      </div>
+      <div class="process-section">
+        <h2 class="process-title">
+          <div class="process-icon"></div>
+          Learnability
+        </h2>
+        <p>No search functionality, can be hard to navigate with the amount of ascii visual background noise.</p>
+        <p>Navigation options aren’t grouped by functionality, so it can be difficult for new users to find all the information they would need.</p>
+      </div>
+      <div class="process-section">
+        <h2 class="process-title">
+          <div class="process-icon"></div>
+          Memorability
+        </h2>
+        <p>The retro theme and the ascii background art makes the website very memorable and matches the game’s retro aesthetic.</p>
+        <p>The chronological order of the update timeline makes it easy for users to identify the latest patch notes.</p>
+      </div>
+      <div class="process-section">
+        <h2 class="process-title">
+          <div class="process-icon"></div>
+          Conceptual Model
+        </h2>
+        <p>It can be initially hard to tell what this website is doing. Is it trying to get you to download the game? Is it just a place for dev logs? There could be potential confusion there.</p>
+        <p>The version number helps indicate how long development has been going on for, and gives users an idea of the kind of game they’re getting into.</p>
+      </div>
+      <div class="process-section">
+        <h2 class="process-title">
+          <div class="process-icon"></div>
+          WebAIM WAVE
+        </h2>
+        <p>Some linked images missing alternative text.</p>
+        <p>Lots of redundant title text.</p>
+        <p>However, the website does have 170/182 features that have an alternative text.</p>
+        <p>No contrast errors were detected, but I disagree with that. It can be hard to tell what you’re looking at initially.</p>
+      </div>
+      
+      <div class="process-section">
+        <h2 class="process-title">
+          <div class="process-icon"></div>
+          Visual Design Style Guide:
+        </h2>
+        
+        <div class="image-grid">
+          
+          <img src="/style.png?height=150&width=500" alt="User persona 1">
+        </div>
+      </div>
+      
+      <div class="process-section">
+        <h2 class="process-title">
+          <div class="process-icon"></div>
+          Mockups
+        </h2>
+        <p>I explored how the layout would look for different screen sizes.</p>
+        
+        <h3>Desktop</h3>
+        <img src="/desktop.png" alt="Dashboard Iteration 1" class="case-study-image">
+        
+        <h3>iPad</h3>
+        <img src="/ipad.png" alt="Dashboard Iteration 2" class="case-study-image">
+        
+        <h3>iPhone</h3>
+        <img src="/phone.png" alt="Final Dashboard Design" class="case-study-image">
+      </div>
+      
+      <div class="process-section">
+        <h2 class="process-title">
+          <div class="process-icon"></div>
+          Conclusions
+        </h2>
+        <ul>
+          <li>Simplifying the UI for new users, and making the download button as easily accessible as possible are very important when promoting a game. </li>
+          <li>Grouping navigation links by functionality improves learnability and helps users quickly locate the resources they need.</li>
+          <li>Maintaining the retro aesthetic is important for memorability and staying true to the identity of Dwarf Fortress, but it should not come at the cost of usability.
+          </li>
+        </ul>
+      </div>
+    </div>
+    
+    <a href="index.html" class="pixel-button back-button">RETURN TO HOME</a>
+  </div>
+</body>
+</html>

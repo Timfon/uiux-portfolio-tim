@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comparing Search Bar UI Components
+</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <style>
+    .case-study-container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+    
+    .case-study-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    
+    .case-study-image {
+      width: 100%;
+      height: auto;
+      border: 4px solid var(--border-color);
+      border-radius: 8px;
+      margin: 2rem 0;
+    }
+    
+    .process-section {
+      margin: 3rem 0;
+      padding: 1.5rem;
+      border: 2px solid var(--border-color);
+      border-radius: 8px;
+      background-color: var(--card-bg);
+    }
+    
+    .process-title {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+      color: var(--accent-color);
+    }
+    
+    .process-icon {
+      width: 24px;
+      height: 24px;
+      background-color: var(--accent-color);
+    }
+    
+    .image-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+    
+    .image-grid img {
+      width: 100%;
+      height: auto;
+      border: 2px solid var(--border-color);
+      border-radius: 4px;
+    }
+    
+    .back-button {
+      display: inline-block;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="game-container">
+    <a href="index.html" class="menu-item back-button">BACK TO HOME</a>
+    
+    <div class="case-study-container">
+      <div class="case-study-header">
+        <h1>Comparing Search Bar UI Components
+        </h1>
+        <p class="tagline">Gmail, Discord, and Steam
+        </p>
+      </div>
+      
+      <img src="/steam_search.png" alt="Mobile App Redesign Cover Image" class="case-study-image">
+      
+      <div class="process-section">
+        <h2 class="process-title">
+          <div class="process-icon"></div>
+          Sample search bars
+        </h2>
+        Gmail:
+        <div class="image-grid">
+          <img src="/uiux_search.png" alt="User persona 1">
+        </div>
+        Discord:
+        <div class="image-grid">
+          <img src="/discord_search.png" alt="User persona 1">
+        </div>
+        Steam:
+        <div class="image-grid">
+          <img src="/steam0search.png" alt="User persona 1">
+        </div>
+
+        
+        
+      </div>
+      <div class="process-section">
+        <h2 class="process-title">
+          <div class="process-icon"></div>
+          Input
+        </h2>
+
+        <div class="image-grid">
+          <img src="/input_table.png" alt="User persona 1">
+        </div>
+
+      </div>
+      <div class="process-section">
+        <h2 class="process-title">
+          <div class="process-icon"></div>
+          Output
+        </h2>
+
+        <div class="image-grid">
+          <img src="/output.png" alt="User persona 1">
+        </div>
+      </div>
+      
+      <div class="process-section">
+        <h2 class="process-title">
+          <div class="process-icon"></div>
+          State Models
+        </h2>
+        Steam search bar mouse state model:
+        
+        <div class="image-grid">
+          <img src="/state1.png" alt="User persona 1">
+        </div>
+        Steam search bar keyboard state model:
+        <div class="image-grid">
+          <img src="/state2.png" alt="User persona 1">
+        </div>
+        Steam search bar revised mouse state model (slightly more convenient for mouse users, but keyboard users still have to repeatedly hit tab to get to the desired component):
+        <div class="image-grid">
+          <img src="/state3.png" alt="User persona 1">
+        </div>
+        Steam search bar revised keyboard state model (CMD + K automatically focuses on search bar, mouse-only users still have to move their mouse to click on the search bar.):
+
+        <div class="image-grid">
+          <img src="/state4.png" alt="User persona 1">
+        </div>
+      </div>
+      <div class="process-section">
+        <h2 class="process-title">
+          <div class="process-icon"></div>
+          Redesigning the Steam Search Bar
+        </h2>
+        <div class="image-grid">
+          <img src="/redesign.png" alt="User persona 1">
+        </div>
+      </div>
+
+      <div class="process-section">
+        <h2 class="process-title">
+          <div class="process-icon"></div>
+        Conclusions
+        </h2>
+        <p>Steam's search bar is the most convenient for keyboard users, but the least convenient for mouse users. Discord's search bar is the most convenient for mouse users, but the least convenient for keyboard users. Gmail's search bar is a good compromise between the two.</p>
+      </div>
+
+    </div>
+
+    <a href="index.html" class="pixel-button back-button">RETURN TO HOME</a>
+  </div>
+</body>
+</html>
